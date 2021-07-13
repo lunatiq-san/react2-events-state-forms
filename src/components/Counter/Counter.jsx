@@ -2,6 +2,20 @@ import React from 'react';
 import './Counter.css';
 
 class Counter extends React.Component {
+  // Arrow fn automatically binds context
+  handleIncrement = event => {
+    console.log('Click on increment button');
+    // The event is only available in synchronous code
+    const target = event.target;
+
+    setTimeout(() => {
+      console.log(target);
+    }, 1000);
+  };
+
+  handleDecrement = () => {
+    console.log('Click on decrement button');
+  };
   // Mandatory class method. They shoud return markup
   render() {
     return (
@@ -10,15 +24,12 @@ class Counter extends React.Component {
 
         <div className="Counter__controls">
           {/* Event - onClick, onSubmit, onChange, onMouseMove etc. */}
-          <button
-            type="button"
-            onClick={() => {
-              console.log('Click on increment button');
-            }}
-          >
+          <button type="button" onClick={this.handleIncrement}>
             Increment on 1
           </button>
-          <button type="button">Decrement on 1</button>
+          <button type="button" onClick={this.handleDecrement}>
+            Decrement on 1
+          </button>
         </div>
       </div>
     );
