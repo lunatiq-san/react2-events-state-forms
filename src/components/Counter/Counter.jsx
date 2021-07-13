@@ -27,7 +27,13 @@ class Counter extends React.Component {
 
   handleDecrement = () => {
     // this.setState(update, callback);
-    this.setState({ value: 10 });
+    // this.setState({ value: 10 });
+    // Object ^^^
+
+    this.setState(prevState => ({
+      value: prevState.value + 1,
+    }));
+    // Link ^^^
   };
   // Mandatory class method. They shoud return markup
   render() {
