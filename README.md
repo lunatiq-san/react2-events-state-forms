@@ -1,7 +1,7 @@
 - ✅ Компоненты-классы: class, extends, constructor(), render()
 - События:
   - Встроенные пропсы событий
-  - Инлайн колбеки
+  - ✅ Инлайн колбеки
   - Методы для колбеков в разметку (публичные свойства класса)
   - SyntheticEvent Object и асинхронные операции
 - [Внутреннее состояние компонента](http://fecore.net.ua/books/rq7s2k-react/lesson-03/images/class-component.jpg):

@@ -9,7 +9,15 @@ class Counter extends React.Component {
         <span className="Counter__value">0</span>
 
         <div className="Counter__controls">
-          <button type="button">Increment on 1</button>
+          {/* Event - onClick, onSubmit, onChange, onMouseMove etc. */}
+          <button
+            type="button"
+            onClick={() => {
+              console.log('Click on increment button');
+            }}
+          >
+            Increment on 1
+          </button>
           <button type="button">Decrement on 1</button>
         </div>
       </div>
