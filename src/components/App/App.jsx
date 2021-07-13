@@ -15,6 +15,7 @@ const App = () => {
     <>
       <h1>Component state</h1>
 
+      <Counter initialValue={10} />
       <Counter />
     </>
   );

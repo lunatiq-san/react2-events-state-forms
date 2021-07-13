@@ -2,6 +2,12 @@ import React from 'react';
 import './Counter.css';
 
 class Counter extends React.Component {
+  // Default props for class with Babel
+  static defaultProps = {
+    initialValue: 0,
+  };
+
+  static propTypes = {};
   // constructor() {
   //   super();
 
@@ -12,7 +18,8 @@ class Counter extends React.Component {
 
   // Same as above, with Babel
   // state - always object
-  state = { value: 5 };
+  // state = { value: 5 };
+  state = { value: this.props.initialValue };
 
   // Arrow fn automatically binds context
   handleIncrement = event => {
