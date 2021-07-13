@@ -11,6 +11,7 @@ class Counter extends React.Component {
   // }
 
   // Same as above, with Babel
+  // state - always object
   state = { value: 5 };
 
   // Arrow fn automatically binds context
@@ -25,7 +26,8 @@ class Counter extends React.Component {
   };
 
   handleDecrement = () => {
-    console.log('Click on decrement button');
+    // this.setState(update, callback);
+    this.setState({ value: 10 });
   };
   // Mandatory class method. They shoud return markup
   render() {

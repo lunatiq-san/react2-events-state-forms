@@ -10,9 +10,9 @@
     [Обновение компонента](http://fecore.net.ua/books/rq7s2k-react/lesson-03/images/reactivity.jpg)
   - ✅ state в конструкторе
   - ✅ state как публичное свойство
-- [Изменение состояния](./state-update.png):
-  - Запрет на изменение вручную по ссылке
-  - Метод setState(update, callback)
+- ✅ [Изменение состояния](./state-update.png):
+  - ✅ Запрет на изменение вручную по ссылке
+  - ✅ Метод setState(update, callback)
   - Как обновляется состояние - передача слайса
   - Изменение состояния от предыдущего. Метод setState(updaterFn, callback)
   - Начальное состояние от props
