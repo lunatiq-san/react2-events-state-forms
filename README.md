@@ -1,4 +1,4 @@
-- Компоненты-классы: class, extends, constructor(), render()
+- ✅ Компоненты-классы: class, extends, constructor(), render()
 - События:
   - Встроенные пропсы событий
   - Инлайн колбеки
