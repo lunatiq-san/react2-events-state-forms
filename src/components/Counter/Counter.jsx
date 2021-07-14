@@ -46,10 +46,12 @@ class Counter extends React.Component {
   };
   // Mandatory class method. They shoud return markup
   render() {
+    const { value } = this.state;
+
     return (
       <div className="Counter">
         {/* <span className="Counter__value">{this.state.value}</span> */}
-        <Value value={this.state.value} />
+        <Value value={value} />
 
         <Controls
           onIncrement={this.handleIncrement}
