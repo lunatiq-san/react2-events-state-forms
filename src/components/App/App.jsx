@@ -1,29 +1,51 @@
+import { Component } from 'react';
 import './App.css';
 // import Counter from '../Counter';
 // import Dropdown from '../Dropdown';
-import ColorPicker from '../ColorPicker';
+// import ColorPicker from '../ColorPicker';
+import TodoList from '../TodoList';
 
-const colorPickerOptions = [
-  { label: 'red', color: '#F44336' },
-  { label: 'green', color: '#4CAF50' },
-  { label: 'blue', color: '#2196F3' },
-  { label: 'grey', color: '#607D8B' },
-  { label: 'pink', color: '#E91E63' },
-  { label: 'indigo', color: '#3F51B5' },
-];
+// const colorPickerOptions = [
+//   { label: 'red', color: '#F44336' },
+//   { label: 'green', color: '#4CAF50' },
+//   { label: 'blue', color: '#2196F3' },
+//   { label: 'grey', color: '#607D8B' },
+//   { label: 'pink', color: '#E91E63' },
+//   { label: 'indigo', color: '#3F51B5' },
+// ];
 
-const App = () => {
-  return (
-    <>
-      <h1>Component state</h1>
+class App extends Component {
+  state = {
+    todos: [
+      { id: 'id-1', text: 'Learn the basics React', completed: false },
+      { id: 'id-2', text: 'Deal with React Router', completed: false },
+      { id: 'id-3', text: 'Get through the Redux', completed: false },
+    ],
+  };
 
-      {/* <Counter initialValue={10} />
-      <Counter /> */}
-      {/* <Dropdown /> */}
+  deleteTodo = todoId => {
+    this.setState(prevState => ({
+      todos: prevState.todos.filter(todo => todo.id !== todoId),
+    }));
+  };
 
-      <ColorPicker options={colorPickerOptions} />
-    </>
-  );
-};
+  render() {
+    const { todos } = this.state;
+
+    return (
+      <>
+        <h1>Component state</h1>
+
+        {/* <Counter initialValue={10} />
+        <Counter /> */}
+        {/* <Dropdown /> */}
+
+        {/* <ColorPicker options={colorPickerOptions} /> */}
+
+        <TodoList todos={todos} onDeleteTodo={this.deleteTodo} />
+      </>
+    );
+  }
+}
 
 export default App;
